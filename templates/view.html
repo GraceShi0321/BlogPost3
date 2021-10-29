@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Some Cool Messages Yeah~{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+	{% for m in entries %}
+		{{ m[1] }}<br>
+		- {{ m[0] }}<hr>
+	{% endfor %}
+{% endblock %}
